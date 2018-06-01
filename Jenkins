@@ -15,6 +15,12 @@ node {
           sh 'npm test'
        }
      }
+     
+     stage('slack') {
+      nodejs(nodeJSInstallationName: 'NodeJS10'){
+          sh 'npm install slack-node'
+       }
+     }
 }
          
        
